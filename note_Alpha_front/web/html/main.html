@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title data-i18n="sign-links"></title>
+    <!--import CSS-->
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
+
+
+    <!--import JavaScript-->
+    <script src="../js/JQuery/jquery-2.1.1.js" type="text/javascript"></script>
+    <script src="../js/JQuery/jquery.i18n.properties-1.0.9.js" type="text/javascript"></script>
+    <script src="../js/bootstrap/js/bootstrap.js"></script>
+    <script src="../js/csbn/Common.js" type="text/javascript"></script>
+    <script src="../js/csbn/mainModule/main.js" type="text/javascript"></script>
+</head>
+
+
+<body onload="init()">
+
+<div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"></button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalLoader" tabindex="-1" role="dialog" aria-hidden="true"
+     style="background: rgba(0,0,0,0.5)">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background: rgba(0,0,0,0);border: none">
+            <img class="loader" src="../resource/pic/svg/loading.svg"/>
+        </div>
+    </div>
+</div>
+
+<div class="main" id="main">
+    <div class="main-cover"></div>
+    <div class="main-header"></div>
+    <div class="main-content"></div>
+    <div class="main-footer"></div>
+</div>
+
+</body>
+</html>

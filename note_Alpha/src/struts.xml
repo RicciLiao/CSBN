@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.action.excludePattern" value="/websocket"></constant>
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <package name="def" namespace="/" extends="struts-default,json-default">
+        <action name="signUp" class="userInfoAction" method="signUp">
+            <result name="error" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+            <result name="success" type="chain">createUser</result>
+        </action>
+        <action name="checkByUserName" class="userInfoAction" method="checkByUserName">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="createUser" class="userInfoAction" method="createUser">
+            <result name="error" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+            <result name="success" type="chain">createUserSpace</result>
+        </action>
+
+        <action name="createUserSpace" class="userInfoAction" method="createUserSpace">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="login" class="userInfoAction" method="login">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="loginSuccess" class="userInfoAction" method="loginSuccess">
+            <result name="success">/notebook.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+        <action name="createItem" class="itemInfoAction" method="createItem">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="loadUserSpace" class="itemInfoAction" method="loadUserSpace">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="loadItem" class="itemInfoAction" method="loadItem">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="renameItem" class="itemInfoAction" method="renameItem">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="getItemSize" class="itemInfoAction" method="getItemSize">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="identifyItemType" class="itemInfoAction" method="identifyItemType">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="checkItemEnc" class="itemInfoAction" method="checkItemEnc">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="itemSave" class="itemInfoAction" method="itemSave">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="itemEnSave" class="itemInfoAction" method="itemEnSave">
+            <result name="success" type="chain">itemSave</result>
+        </action>
+        <action name="checkItemPsw" class="itemInfoAction" method="checkItemPsw">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="downloadItem" class="itemInfoAction">
+            <result name="success" type="stream">
+                <param name="contentDisposition">attachment;filename=${itemName}.${itemType}</param>
+                <param name="inputName">downloadItem</param>
+            </result>
+        </action>
+        <action name="loadItemClass" class="itemClassInfoAction" method="loadItemClass">
+            <result name="success" type="chain">loadItemClasses</result>
+        </action>
+        <action name="loadItemClasses" class="userItemClassificationAction" method="loadItemClasses">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="itemSearch" class="itemInfoAction" method="itemSearch">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+        <action name="loadItemTags" class="userItemTagAction" method="loadItemTags">
+            <result name="success" type="json">
+                <param name="root">ajaxResult</param>
+            </result>
+        </action>
+    </package>
+</struts>    

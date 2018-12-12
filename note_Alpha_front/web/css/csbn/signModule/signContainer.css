@@ -1,0 +1,142 @@
+.signContainer {
+    margin: 0 auto;
+    width: 480px;
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+    display: none;
+}
+
+.signContainer > .signContainer-logo {
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.signContainer > .signContainer-logo > img {
+    height: 100px;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer {
+    margin: 0 auto;
+    width: 85%;
+    overflow: hidden;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 150, 255, 0.8);
+    color: white;
+    border-radius: 3px;
+    margin-top: 45px;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > button:hover {
+    background-color: rgba(0, 150, 255, 1);
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > input {
+    margin: 20px auto;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px gainsboro solid;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signUp-user-otp {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px gainsboro solid;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signUp-user-otp > button {
+    height: inherit;
+!important;
+    width: 30%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signUp-user-otp > button:hover {
+    background: rgba(34, 139, 34, 09);
+    color: white;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signUp-user-otp > input {
+    height: 95%;
+    width: 70%;
+    margin: 0;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signContainer-links-spb {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signContainer-links {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > div > button {
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > div > span {
+    font-size: 14px;
+    color: gray;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signContainer-links-spb > .otp-signIn {
+    color: #1E90FF;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signContainer-links-spb > .fg-psw {
+    margin-right: 0px;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signContainer-links-spb > .signUpUnAgreement {
+    color: #EE4000;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signContainer-links-spb > .signUpAgreement {
+    color: green;
+}
+
+.signContainer > .signContainer-fill > .signContainer-signInContainer > .signContainer-links-spb > .signUpAgreementCHK {
+    display: none;
+}
+
+.signContainer > .signContainer-changer {
+    height: 58px;
+    display: flex;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    border-top: 1px solid #ebebeb;
+    font-size: 16px;
+    position: relative;
+    /*z-index: 999;*/
+}
+
+.signContainer > .signContainer-changer > button {
+    display: inline-block;
+    color: #2e6da4;
+    font-size: 16px;
+}

@@ -1,0 +1,133 @@
+
+div {
+    /*border: 1px red solid;*/
+    width: inherit;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    font-family: Microsoft YaHei, SimHei, Tahoma !important;
+    font-size: 14px;
+}
+
+button {
+    display: block;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Microsoft YaHei, SimHei, Tahoma !important;
+    font-size: 14px;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    font-family: Microsoft YaHei, SimHei, Tahoma !important;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(../resource/pic/background.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.per-loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.per-loader > .loader {
+    width: 5%;
+}
+
+.main > .main-content {
+    position: relative;
+}
+
+.main > .main-cover {
+    position: absolute;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.main > .main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+}
+
+.main > .main-header > div {
+    float: right;
+    width: 600px;
+    height: 80px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.main > .main-header > div > button {
+    display: inline-block;
+    margin-top: 40px;
+    color: white;
+    font-size: 15px;
+    margin-left: 25px;
+}
+
+.main > .main-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+}
+
+.main > .main-footer > div {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.main > .main-footer > div > button {
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+}
+
+@media screen and (max-height: 800px) {
+    body {
+        height: 800px;
+    }
+
+    .main {
+        height: 800px;
+    }
+
+    .pop-window > .pop-window-bg {
+        height: 800px;
+    }
+}

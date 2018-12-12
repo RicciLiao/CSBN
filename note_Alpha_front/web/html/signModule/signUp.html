@@ -1,0 +1,52 @@
+<div class="signContainer-signInContainer" id="signContainer-signUpContainer">
+    <input type="text" data-i18n-input="signUp-user-name" data-i18n-attr="placeholder">
+    <input type="text" data-i18n-input="signUp-user-phone-num" data-i18n-attr="placeholder">
+    <input type="password" data-i18n-input="signUp-user-password" data-i18n-attr="placeholder">
+    <div class="signUp-user-otp">
+        <input type="text" data-i18n-input="signUp-otp" data-i18n-attr="placeholder">
+        <button data-i18n="signUp-get-otp"></button>
+    </div>
+    <div class="signContainer-links-spb">
+        <input type="checkbox" class="signUpAgreementCHK">
+        <button class="signUpUnAgreement" data-i18n="signUp-agreement"></button>
+    </div>
+    <button data-i18n="signUp"></button>
+    <div class="signContainer-links">
+        <button class="" data-i18n="sign-links"></button>
+        <span data-i18n="sign-links-spr"></span>
+        <button class="" data-i18n="sign-links"></button>
+        <span data-i18n="sign-links-spr"></span>
+        <button class="" data-i18n="sign-links"></button>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        commonFunc.loadProperties();
+        bind();
+    }(jQuery));
+
+    function bind() {
+        $('.signUpUnAgreement').on({
+            click: function () {
+                commonFunc.popWindow('../html/signModule/userAgreement.html', 'modal-lg');
+            }
+        });
+
+        $('.signUpAgreementCHK').on({
+            change: function () {
+                if ($(this).is(':checked')) {
+                    $('.signUpUnAgreement').attr('class', 'signUpAgreement');
+                } else {
+                    $('.signUpAgreement').attr('class', 'signUpUnAgreement');
+                }
+            }
+        });
+
+        $('.pop-window-container').on({
+            click: function () {
+                event.cancelBubble = true
+            }
+        });
+    }
+</script>

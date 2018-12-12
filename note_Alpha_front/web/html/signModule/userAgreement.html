@@ -1,0 +1,26 @@
+<div>
+    <h1>h1h1h1h1h1h1</h1>
+    <h2>h2h2h2h2h2</h2>
+    <h3>h3h3h3h3h3</h3>
+    <h4>h4h4h4h4h4</h4>
+    <h5>h5h5h5h5h5</h5>
+</div>
+
+<script>
+    $(function () {
+
+        $('#modalWindow .modal-title').text($.i18n.prop('userAgreement'));
+        $('#modalWindow .btn-primary').text($.i18n.prop('agree'));
+        $('#modalWindow .btn-secondary').text($.i18n.prop('disagree'));
+        $('#modalWindow .btn-primary').one({
+            click: function () {
+                $('.signUpUnAgreement').css('color', 'green');
+            }
+        });
+        $('#modalWindow .btn-secondary').one({
+            click: function () {
+                $('.signUpUnAgreement').css('color', 'red');
+            }
+        });
+    }(jQuery));
+</script>

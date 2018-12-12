@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script>
+        function demo() {
+            $("#a").on("input blur", function () {
+                a();
+                //$(this).height(this.scrollHeight);
+            })
+            document.getElementById("a").value ="(function ()(function ()(function ()(function ()(function ()(" +
+                "function ()(function ()(function ()(function ()(function ()(function ()(functio" +
+                "n ()(function ()(function ()(function ()(function ()(function ()(function ()" +
+                "(function ()(function ()(function ()(function ()(function ()(function ()" +
+                "(function ())(function ()(funct)(function ()(funct)(function ()(funct" +
+                ")(function ()(funct)(function ()(funct)(function ()(funct)(function ()(funct)(function ()(funct)(function ()(funct" +
+                "";
+            //var outter = $("#a").outerHeight();
+            //var inner = document.getElementById("a").clientHeight;
+
+        }
+        function a() {
+            if ($("#a").outerHeight() == document.getElementById("a").scrollHeight) {
+                $("#b").val(document.getElementById("a").scrollHeight);
+                return;
+            } else if($("#a").outerHeight() > document.getElementById("a").scrollHeight){
+                document.getElementById("a").style.height = "auto";
+                a();
+            }
+            else {
+                $("#a").height(document.getElementById("a").scrollHeight);
+                $("#b").val("2");
+                return;
+            }
+        }
+    </script>
+</head>
+<body onload="demo()">
+<textarea id="a" style="height: 200px;overflow: hidden;"></textarea>
+<input id="b" type="text">
+</body>
+</html>

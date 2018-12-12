@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="def" namespace="/" extends="struts-default,json-default">
+		<interceptors>
+			<interceptor name="myInterceptor" class="com.test.interceptor.MyInterceptor"></interceptor>
+			<interceptor name="myInterceptor1" class="com.test.interceptor.MyInterceptor1"></interceptor>
+			<!-- 定义公共的拦截器链，在action标签中只需要引用拦截器链 -->
+			<interceptor-stack name="defaultinter">
+				<interceptor-ref name="myInterceptor1"></interceptor-ref>
+				<interceptor-ref name="myInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<action name="login" class="com.test.action.LoginAction" method="login">
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="init" class="com.test.action.LoginAction" method="init">
+			<result name="success">/init.jsp</result>
+			<result name="error" >/error.jsp</result>
+			<interceptor-ref name="defaultinter"></interceptor-ref>
+		</action>
+	</package>
+</struts>    

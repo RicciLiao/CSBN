@@ -1,0 +1,1 @@
+var contant_mainPage;

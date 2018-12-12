@@ -1,0 +1,499 @@
+@CHARSET "UTF-8";
+
+input,button,select,textarea {
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+body {
+	margin: 0px;
+}
+
+/* div {
+	border: 1px red solid;
+} */
+.d_center {
+	position: absolute;
+	background: url(../source/background.jpg) 0 50% no-repeat;
+	border: none;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 83%;
+}
+
+.d_center_opacity {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	margin: 0 auto;
+}
+
+.d_app_download {
+	position: absolute;
+	border: none;
+	/* 	background-color: rgba(240, 248, 255, 1); */
+	width: 100%;
+	height: 90px;
+	top: 84%;
+}
+
+.d_bottom {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	border: none;
+	background-color: rgba(240, 248, 255, 1);
+	width: 100%;
+	height: 20px;
+}
+
+.d_login {
+	margin-left: 630px;
+	position: absolute;
+	border: none;
+	background-color: white;
+	width: 370px;
+	height: 430px;
+	float: right;
+	margin-top: 125px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+	border-radius: 8px;
+	z-index: 999;
+}
+
+.d_logo {
+	position: absolute;
+	width: 100%;
+	height: 85px;
+	background-color: rgba(0, 0, 0, 0);
+	margin-left: 0px;
+}
+
+.logo {
+	position: absolute;
+	width: 180px;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+
+.d_login_choose {
+	height: 60px;
+	border-bottom: 3px solid rgba(176, 196, 222, 0.3);
+}
+
+.login_choose {
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	font-size: 17px;
+	margin-top: 0px;
+	margin-left: 53px;
+	width: 100px;
+	height: 63px;
+	border: none;
+	border-bottom: 3px solid rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+.login_choose_selected {
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	font-size: 17px;
+	margin-top: 0px;
+	margin-left: 53px;
+	width: 100px;
+	height: 63px;
+	border: none;
+	border-bottom: 3px solid rgba(0, 0, 255, 0.8);
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.d_login_zhanghao {
+	position: absolute;
+	width: 370px;
+	height: 367px;
+	display: none;
+}
+
+.d_login_saoyisao {
+	position: absolute;
+	width: 370px;
+	height: 367px;
+	display: none;
+}
+
+.user_name {
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	width: 320px;
+	height: 45px;
+	margin-top: 30px;
+	margin-left: 18px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	font-size: 15px;
+	/* 	background-color: rgba(255,255,255,0.1); */
+	padding-left: 60px;
+}
+
+.user_name:HOVER {
+	background-color: rgba(200, 200, 200, 0.1);
+}
+
+.user_psw {
+	font-family: Microsoft YaHei;
+	width: 320px;
+	height: 45px;
+	margin-left: 18px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top:none;
+	font-size: 15px;
+	/* 	background-color: rgba(255,255,255,0.1); */
+	padding-left: 60px;
+}
+
+.user_psw:HOVER {
+	background-color: rgba(200, 200, 200, 0.1);
+}
+
+.remember_user {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.l_remember_user {
+	font-family: Microsoft YaHei;
+	position: absolute;
+	left: 45;
+	top: 142;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.8);
+	letter-spacing: 1px;
+}
+
+.sign_in {
+	display: block;
+	border-radius: 8px;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	font-size: 16px;
+	border: none;
+	background-color: rgba(0, 150, 255, 0.8);
+	height: 45px;
+	width: 85%;
+	color: white;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.sign_in:HOVER {
+	background-color: rgba(0, 150, 255, 1);
+}
+
+.a_login_matter {
+	display:block;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	text-decoration: none;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.6);
+	letter-spacing: 1px;
+	margin-left: 25px;
+	margin-top: 20px;
+}
+
+.a_login_matter:HOVER {
+	color: rgba(0, 0, 0, 1);
+}
+
+.d_login_other {
+	margin-top: 288px;
+	width: 100%;
+	height: 79px;
+	background-color: rgba(240, 248, 255, 1);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	/*background-color: rgba(255,255,255,0.1);*/
+}
+
+.b_reg {
+	position: absolute;
+	color: rgba(0, 150, 255, 1);
+	margin-top: 20px;
+	margin-left: 230px;
+	border-radius: 4px;
+	width: 110px;
+	height: 40px;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid rgba(0, 150, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+.b_reg:HOVER {
+	border: none;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.d_login_QRcode {
+	width: 100%;
+	height: 269px;
+}
+
+.QRcode {
+	position: absolute;
+	width: 45%;
+	left: 100;
+	top: 45;
+}
+
+.QRcode_way {
+	display: none;
+	left: 210;
+	top: 30;
+	position: absolute;
+	width: 120px;
+	height: 190px;
+	background-color: black;
+}
+
+.a_saoyisao_tips {
+	display: inline-block;
+	margin-top: 240px;
+	margin-left: 80px;
+	font-size: 15px;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	letter-spacing: 4px;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 15px;
+}
+
+.a_saoyisao_tips_ {
+	display: inline-block;
+	font-size: 15px;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	letter-spacing: 4px;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.a_app_ {
+	color: rgba(0, 160, 255, 1);
+	display: inline-block;
+	font-size: 15px;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	letter-spacing: 2px;
+	text-decoration: none;
+}
+
+.QQlogo {
+	cursor: pointer;
+	opacity: 0.2;
+	position: absolute;
+	width: 25px;
+	margin-top: 25px;
+	margin-left: 30px;
+	filter: grayscale(100%);
+}
+
+.QQlogo_ {
+	cursor: pointer;
+	opacity: 0.2;
+	position: absolute;
+	width: 25px;
+	margin-top: 25px;
+	margin-left: 30px;
+	filter: grayscale(0%);
+}
+
+.Wechatlogo {
+	cursor: pointer;
+	opacity: 0.2;
+	position: absolute;
+	width: 35px;
+	margin-top: 25px;
+	margin-left: 75px;
+	filter: grayscale(100%);
+}
+
+.wechatlogo_ {
+	cursor: pointer;
+	opacity: 0.2;
+	position: absolute;
+	width: 35px;
+	margin-top: 25px;
+	margin-left: 75px;
+	filter: grayscale(0%);
+}
+
+.Weibologo {
+	cursor: pointer;
+	opacity: 0.2;
+	position: absolute;
+	width: 35px;
+	margin-top: 25px;
+	margin-left: 128px;
+	filter: grayscale(100%);
+}
+
+.Weibologo_ {
+	cursor: pointer;
+	opacity: 0.2;
+	position: absolute;
+	width: 35px;
+	margin-top: 25px;
+	margin-left: 128px;
+	filter: grayscale(0%);
+}
+
+.PClogo {
+	margin-left: 135px;
+	opacity: 0.3;
+	width: 78px;
+	cursor: pointer;
+	filter: grayscale(100%);
+	opacity: 0.3;
+}
+
+.PClogo_ {
+	opacity: 0.8;
+	filter: grayscale(0%);
+}
+
+.Androidlogo {
+	margin-left: 70px;
+	cursor: pointer;
+	width: 70px;
+	filter: grayscale(100%);
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.Androidlogo_ {
+	filter: grayscale(0%);
+}
+
+.d_top_links {
+	/* 	border: 1px red solid; */
+	position: relative;
+	float: right;
+	width: 545px;
+	height: 100%;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+	border-bottom-left-radius: 8px;
+	/* 	border-bottom-right-radius: 8px; */
+	/* 	background-color: rgba(0,0,0,0.1); */
+}
+
+.a_top_links {
+	display: inline-block;
+	margin-top: 35px;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	color: white;
+	font-size: 14px;
+	margin-left: 20px;
+	text-decoration: none;
+}
+
+.a_top_links:HOVER {
+	text-decoration: underline;
+}
+
+.d_bottom_links {
+	width: 250px;
+	height: 100%;
+	margin: 0 auto;
+	height: 100%;
+	/* 	border: 1px red solid; */
+}
+
+.a_bottom_links {
+	color: black;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+	display: inline-table;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.d_app_download_logo {
+	width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	/* 	border: 1px red solid; */
+}
+
+.k {
+	margin: 0 auto;
+	height: 100%;
+	width: 1000px;
+    /* border: 1px blue solid; */
+}
+
+.login_tip{
+	position:absolute;
+	display: block;
+	margin-top: 5px;
+	margin-left: 30px;
+	font-size: 14px;
+	font-family: Microsoft YaHei, SimHei, Tahoma !important;
+}
+
+@media screen and (max-height:700px){
+	.d_center{
+		height: 581px;
+	}
+	.d_center_opacity {
+		height: 581px;
+	}	
+	.d_app_download{
+		top: 588;
+	}
+	.d_bottom{
+		top: 700;
+	}
+	
+}
+
+@media screen and (max-width:1020px) {
+	.d_top{
+		box-shadow:none;
+	}
+	.z {
+		/* 		border:1px red solid; */
+		margin: 0 auto;
+		height: 100%;
+		width: 1003px;
+	}
+	.d_login {
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	.user_name {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+	.user_psw {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+	.d_login_other {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+/*	.sign_in {
+		background-color: rgba(0, 150, 255, 0.6);
+	}*/
+	.d_center {
+		position: static;
+		width: 1003px;
+		margin: 0px auto;
+	}
+	.d_center_opacity {
+		width: 1003px;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+a{
+	cursor: pointer;
+}

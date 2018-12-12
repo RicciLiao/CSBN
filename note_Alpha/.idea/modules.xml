@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../test/JSE_Test/JSE_Test.iml" filepath="$PROJECT_DIR$/../test/JSE_Test/JSE_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/note_Alpha.iml" filepath="$PROJECT_DIR$/note_Alpha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test/test_Strust2/test_Strust2.iml" filepath="$PROJECT_DIR$/../test/test_Strust2/test_Strust2.iml" />
+    </modules>
+  </component>
+</project>

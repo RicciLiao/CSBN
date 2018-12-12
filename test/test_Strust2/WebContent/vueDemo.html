@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+
+    <script src="js/vue-2.5.17.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<div id="example-0">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+
+<div id="example-1">
+    <button v-on:click="show = !show">
+        Toggle
+    </button>
+    <transition name="fade">
+        <p v-if="show">hello</p>
+    </transition>
+</div>
+
+<div id="example-2">
+    <input v-model="message" placeholder="edit me" id="editMe">
+    <p>Message is: {{ message }}</p>
+</div>
+
+<div id="example-3">
+    <select v-model="selected">
+        <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+        </option>
+    </select>
+    <p>Selected: {{ selected }}</p>
+</div>
+
+</body>
+
+<script>
+    new Vue({
+        el: '#example-0',
+        data: {
+            todos: [
+                {text: '学习 JavaScript'},
+                {text: '学习 Vue'},
+                {text: '整个牛项目'}
+            ]
+        }
+    });
+
+    new Vue({
+        el: '#example-1',
+        data: {
+            show: true
+        }
+    });
+
+    new Vue({
+        el: '#example-2',
+        data: {
+            message: ''
+        }
+    });
+
+    new Vue({
+        el: '#example-3',
+        data: {
+            selected: 'A',
+            options: [
+                {text: '1', value: 'A'},
+                {text: '2', value: 'B'},
+                {text: '3', value: 'C'}
+            ]
+        }
+    });
+
+</script>
+
+<style>
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+
+    div {
+        background: rgba(0, 0, 0, 0.1);
+        margin-top: 5px;
+    }
+</style>
+
+</html>

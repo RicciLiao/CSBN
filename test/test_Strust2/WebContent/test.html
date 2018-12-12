@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.1.1.js"></script>
+</head>
+<script>
+    function filter(target) {
+        console.log(target.value);
+        var regExp = /[^\u4E00-\u9FA5]/g;
+        target.value = target.value.replace(regExp, '');
+    }
+</script>
+<body>
+    <input type="text" oninput="filter(this)" />
+</body>
+</html>
